@@ -3,8 +3,8 @@
 
 int main (){
    
-    int n, ad, i, ponto, pos; 
-    char dolar[10], cents[2], aux[20];
+    int n, i, virg, tamanho; 
+    char dolar[10], cents[2];
     
     scanf("%d", &n);
     
@@ -13,28 +13,25 @@ int main (){
         fgets(dolar, 11, stdin);
         //__fpurge(stdin);
         //fgets(cents, 3, stdin);
-        for (i=0; i<11; i++){
-            if (dolar[i] == '\n'){
-                ad = i - 1;
-            }
-        }
-        ponto = 0;
-        pos = 20;
-        for (i=ad; i>=0; i--){
-            if (ponto < 3){
-                aux[pos] = dolar[i];
-                ponto++;
-                pos--;
-            } else{
-                aux[pos] = ',';
-                ponto = 0;
-                pos = pos - 1;
-                i++;
-            }
+        
+        i = 0;
+        while (dolar[i] != '\n'){
+            i++;
         }
         
-        for (pos=pos + 1; pos<=20; pos++){
-            printf("%c", aux[pos]);
+        virg = i % 3;
+        tamanho = i;
+        printf("%d %d\n", virg, tamanho);
+        
+        for (i=0; i<tamanho; i++){
+            if ((virg == 0 || virg == -3) && i != 0){
+                virg = 3;
+                printf(",");
+                i--;
+            } else {
+                printf("%c", dolar[i]);
+                virg--;
+            }
         }
     }
     
