@@ -18,25 +18,21 @@ int main (){
                 ad = i - 1;
             }
         }
-        printf("CHEGOU ATE AQUI\n");
         ponto = 0;
         pos = 20;
         for (i=ad; i>=0; i--){
             if (ponto < 3){
-                aux[pos] = dolar[ad];
+                aux[pos] = dolar[i];
                 ponto++;
                 pos--;
-                printf("IF\n");
             } else{
-                aux[pos] = '.';
+                aux[pos] = ',';
                 ponto = 0;
                 pos = pos - 1;
                 i++;
-                printf("ELSE\n");
             }
         }
-        printf("CHEGOU ATE AQUI 2\n");
-        printf("%d\n", pos);
+        
         for (pos=pos + 1; pos<=20; pos++){
             printf("%c", aux[pos]);
         }
