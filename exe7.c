@@ -46,7 +46,7 @@ int main (){
         for (i=1; i<2; i++){
             for (h=0; h<15; h++){
                 if (notas[i][h] >= maior){
-                    printf("%0.1f ", notas[i - 1][h]);
+                    printf("MODA: %0.1f   N VEZES: %0.1f\n", notas[i - 1][h], notas[i][h]);
                 }
             }
         }    
