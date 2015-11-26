@@ -25,12 +25,10 @@ int main (){
         y++;
         a--;
         r--;
-        
-       
 
     }
     
-     for(l=0; l<n; l++){
+    for(l=0; l<n; l++){
         for (c=0; c<n; c++){
             printf("%d ", m[l][c]);
         }
