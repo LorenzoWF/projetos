@@ -7,8 +7,8 @@ int main () {
     
     f = 0;
     
-    for (l=0; l<5 && f == 0; l++){
-        for (c=0; c<5 && f == 0; c++){
+    for (l=0; l<5; l++){
+        for (c=0; c<5; c++){
             scanf("%d", &matriz[l][c]);
             if (c > l){
                 if (matriz[l][c] != 0){
