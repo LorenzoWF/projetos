@@ -3,7 +3,7 @@
 
 int main (){
     
-    int n, v, valor, x, y, a, r, l , c;
+    int n, v, x, y, a, r, l , c;
     
     scanf("%d", &n);
     
