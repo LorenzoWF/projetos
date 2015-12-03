@@ -11,7 +11,7 @@ int main (){
     
     f = 0;
     cont = 0;
-    for (i=0; nome[i] != '\0'; i++){
+    for (i=0; nome[i] != '\n'; i++){
         if (nome[i] != 32){
             if (f == 0){
                 printf("%c", nome[i]);
