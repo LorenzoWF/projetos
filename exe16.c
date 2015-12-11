@@ -16,14 +16,12 @@ int main (){
         for (i=0; linha[i] != '\n' && f < 2; i++){
             if (linha[i] == 32){
                 f = 0;
+            } else if ((linha[i] < 97 || linha[i] > 122) && linha[i] != 32){ // O a NA TABELA ASCII E O 97 E O z E O 122
+                f = 2;
             } else{
                 if (f == 0){
-                    if (linha[i] < 97 || linha[i] > 122){ // O a NA TABELA ASCII E O 97 E O z E O 122
-                        f = 2;
-                    } else{
-                        printf("%c", linha[i]);
-                        f = 1;   
-                    }
+                    printf("%c", linha[i]);
+                    f = 1;   
                 }
             }
         }
